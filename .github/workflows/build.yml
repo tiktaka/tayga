@@ -32,4 +32,4 @@ jobs:
           push: true
           pull: true
           platforms: linux/amd64,linux/arm,linux/arm64
-          tags: ghcr.io/${GITHUB_REPOSITORY}/tayga:latest
+          tags: ghcr.io/${{ github.repository_owner }}/tayga:latest
