@@ -39,7 +39,7 @@ The following steps outline how to build the Tayga Docker container images for d
     ```
     Choose the appropriate tar file based on your target device's architecture.
 
-8. Settings on MikroTik RouerOS
+8. Settings on MikroTik RouterOS
     ```RouterOS
         /interface veth
         add address=172.17.0.2/24,2001:db8:0:ffff::2/64 gateway=172.17.0.1 gateway6=2001:db8:0:ffff::1 name=veth1
@@ -112,7 +112,7 @@ The following steps outline how to build the Tayga Docker container images for d
     ```
     Выберите подходящий tar-файл в зависимости от архитектуры вашего целевого устройства.
 
-8. Настройка в MikroTik RouerOS
+8. Настройка в MikroTik RouterOS
     ```RouterOS
         /interface veth
         add address=172.17.0.2/24,2001:db8:0:ffff::2/64 gateway=172.17.0.1 gateway6=2001:db8:0:ffff::1 name=veth1
