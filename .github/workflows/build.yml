@@ -25,11 +25,20 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build & Push
+      - name: Build & Push (tayga)
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./tayga
           push: true
           pull: true
           platforms: linux/amd64,linux/arm,linux/arm64
           tags: ghcr.io/${{ github.repository_owner }}/tayga:latest
+          
+      - name: Build & Push (unbound-dns64)
+        uses: docker/build-push-action@v6
+        with:
+          context: ./unbound-dns64
+          push: true
+          pull: true
+          platforms: linux/amd64,linux/arm,linux/arm64
+          tags: ghcr.io/${{ github.repository_owner }}/unbound-dns64:latest
