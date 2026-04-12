@@ -1,5 +1,5 @@
 # PATHS
-:global "containers_dir" "/containers"
+:global "containers_dir" "/nvme_usb/containers"
 
 # BRIDGE settings
 :global "bridge_name" "containers-bridge"
@@ -33,7 +33,7 @@ add address="$"unbound_network4",$"unbound_network6"" gateway=$"bridge_address4"
 /interface bridge port add bridge=$"bridge_name" interface=$"tayga_veth_name"
 /interface bridge port add bridge=$"bridge_name" interface=$"unbound_veth_name"
 
-/ip address add address=$"tayga_network4" interface=$"bridge_name"
+/ip address add address=$"bridge_network4" interface=$"bridge_name"
 
 /ip route 
 add disabled=no distance=1 dst-address=172.18.0.0/20 gateway=$"tayga_address4" routing-table=main scope=30 suppress-hw-offload=no target-scope=10
