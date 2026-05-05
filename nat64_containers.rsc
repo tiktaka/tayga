@@ -56,6 +56,7 @@ add envlists=unbound interface=$"unbound_veth_name" logging=yes name=unbound-dns
 
 /container envs
 add key=TAYGA_CONF_IPV4_ADDR list=tayga value=172.18.20.1
+add key=TAYGA_CONF_IPV6_ADDR list=tayga value=2001:db8:0:ffff::2/64
 add key=TAYGA_CONF_DYNAMIC_POOL list=tayga value=172.18.0.0/20
 add key=TAYGA_CONF_PREFIX list=tayga value=2001:db8:1:ffff::/96
 

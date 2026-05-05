@@ -10,6 +10,7 @@ mkdir -p ${TAYGA_CONF_DATA_DIR} ${TAYGA_CONF_DIR}
 cat >${TAYGA_CONF_DIR}/tayga.conf <<EOF
 tun-device nat64
 ipv4-addr ${TAYGA_CONF_IPV4_ADDR}
+ipv6-addr ${TAYGA_CONF_IPV6_ADDR}
 prefix ${TAYGA_CONF_PREFIX}
 dynamic-pool ${TAYGA_CONF_DYNAMIC_POOL}
 data-dir ${TAYGA_CONF_DATA_DIR}
